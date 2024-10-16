@@ -25,6 +25,15 @@ public class ContactManager
                 Console.WriteLine($"- {c.Name}");
             }
 
+            Console.Write("Inserisci il contatto da cercare: ");
+            string ricerca = Console.ReadLine();
+            List<Contact> tempContacts = contacts.Where(c => c.Name == ricerca).ToList();
+            Console.WriteLine("List of contacts found:");
+            foreach (Contact c in tempContacts)
+            {
+                Console.WriteLine($"- {c.Name}");
+            }
+
 
             Console.WriteLine("Vuoi uscire dal programma? invio per continuare, esc per uscire");
 
