@@ -35,6 +35,11 @@ public class ContactManager
             }
 
 
+            Console.Write("Insert the name of the contatc you want to delete: ");
+            string deleteName = Console.ReadLine();
+            contacts.RemoveAll(c => c.Name == deleteName);
+
+
             Console.WriteLine("Vuoi uscire dal programma? invio per continuare, esc per uscire");
 
             ConsoleKeyInfo key = Console.ReadKey();
